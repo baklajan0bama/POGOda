@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Карточка с основной информацией -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Название города -->
+            <TextView
+                android:id="@+id/tomorrowCityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Дата -->
+            <TextView
+                android:id="@+id/tomorrowDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Текущая температура -->
+            <TextView
+                android:id="@+id/tomorrowTempTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="48sp"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Разделительная линия -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Температуры по времени суток -->
+            <TextView
+                android:id="@+id/tomorrowMorningTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Утро: --°C"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:drawablePadding="8dp"
+                android:paddingVertical="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="4dp"/>
+
+            <TextView
+                android:id="@+id/tomorrowDayTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="День: --°C"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:drawablePadding="8dp"
+                android:paddingVertical="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="4dp"/>
+
+            <TextView
+                android:id="@+id/tomorrowEveningTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вечер: --°C"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:drawablePadding="8dp"
+                android:paddingVertical="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="4dp"/>
+
+            <TextView
+                android:id="@+id/tomorrowNightTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ночь: --°C"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:drawablePadding="8dp"
+                android:paddingVertical="8dp"/>
+        </LinearLayout>
+
+        <!-- Кнопка назад -->
+        <Button
+            android:id="@+id/tomorrowBackButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Назад"
+            android:textColor="#FFFFFF"
+            android:background="#3F51B5"/>
+    </LinearLayout>
+</ScrollView>
