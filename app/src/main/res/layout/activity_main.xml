@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Поисковая строка -->
         <EditText
             android:id="@+id/editTextCity"
             android:layout_width="match_parent"
@@ -22,7 +21,6 @@
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Кнопка поиска -->
         <Button
             android:id="@+id/buttonSearch"
             android:layout_width="match_parent"
@@ -33,7 +31,6 @@
             android:textAllCaps="false"
             android:layout_marginBottom="24dp"/>
 
-        <!-- Основная информация о погоде -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +40,6 @@
             android:elevation="4dp"
             android:layout_marginBottom="24dp">
 
-            <!-- Название города -->
             <TextView
                 android:id="@+id/textViewCityName"
                 android:layout_width="wrap_content"
@@ -54,7 +50,6 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
 
-            <!-- Дата -->
             <TextView
                 android:id="@+id/textViewDate"
                 android:layout_width="wrap_content"
@@ -64,7 +59,6 @@
                 android:textColor="#757575"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Текущая температура -->
             <TextView
                 android:id="@+id/textViewCurrentTemperature"
                 android:layout_width="wrap_content"
@@ -76,14 +70,12 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Разделительная линия -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#E0E0E0"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Температуры по времени суток -->
             <TextView
                 android:id="@+id/textViewMorningTemp"
                 android:layout_width="match_parent"
@@ -143,7 +135,6 @@
                 android:paddingVertical="8dp"/>
         </LinearLayout>
 
-        <!-- Кнопки прогноза -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
