@@ -1,159 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#F5F7FA"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Кострома"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.003"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="0"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        tools:layout_editor_absoluteX="318dp" />
+        <!-- Поисковая строка -->
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите город"
+            android:textColor="#333333"
+            android:textColorHint="#757575"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="196dp"
-        android:text="Утро"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView7"
-        tools:layout_editor_absoluteY="369dp" />
+        <!-- Кнопка поиска -->
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Найти"
+            android:textColor="#FFFFFF"
+            android:background="#3F51B5"
+            android:textAllCaps="false"
+            android:layout_marginBottom="24dp"/>
 
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="1dp"
-        tools:text="18.06.2025" />
+        <!-- Основная информация о погоде -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+16"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="291dp"
-        tools:layout_editor_absoluteY="369dp" />
+            <!-- Название города -->
+            <TextView
+                android:id="@+id/textViewCityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кострома"
+                android:textSize="24sp"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="+4"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        tools:layout_editor_absoluteX="304dp" />
+            <!-- Дата -->
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 июня 2023"
+                android:textSize="16sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="-7"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:layout_editor_absoluteX="311dp" />
+            <!-- Текущая температура -->
+            <TextView
+                android:id="@+id/textViewCurrentTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+18°C"
+                android:textSize="48sp"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="212dp"
-        android:text="День"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            <!-- Разделительная линия -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="212dp"
-        android:text="Вечер"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            <!-- Температуры по времени суток -->
+            <TextView
+                android:id="@+id/textViewMorningTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Утро: +16°C"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:drawablePadding="8dp"
+                android:paddingVertical="8dp"/>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="208dp"
-        android:text="Ночь"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="4dp"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:text="+25"
-        android:textSize="60sp"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        tools:layout_editor_absoluteY="202dp" />
+            <TextView
+                android:id="@+id/textViewDayTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="День: +22°C"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:drawablePadding="8dp"
+                android:paddingVertical="8dp"/>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="100dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="8dp"
-        android:text="неделя"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        tools:layout_editor_absoluteY="669dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="4dp"/>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="102dp"
-        android:layout_height="57dp"
-        android:text="завтра"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="669dp" />
+            <TextView
+                android:id="@+id/textViewEveningTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вечер: +18°C"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:drawablePadding="8dp"
+                android:paddingVertical="8dp"/>
 
-    <SearchView
-        android:layout_width="306dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toStartOf="@+id/button7" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="4dp"/>
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="найти"
-        tools:layout_editor_absoluteX="318dp"
-        tools:layout_editor_absoluteY="75dp" />
+            <TextView
+                android:id="@+id/textViewNightTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ночь: +14°C"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:drawablePadding="8dp"
+                android:paddingVertical="8dp"/>
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Кнопки прогноза -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonTomorrow"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="#E8EAF6"
+                android:text="Завтра"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#E0E0E0"/>
+
+            <Button
+                android:id="@+id/buttonWeek"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="#E8EAF6"
+                android:text="Неделя"
+                android:textAllCaps="false"
+                android:textColor="#F3F4F6" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
