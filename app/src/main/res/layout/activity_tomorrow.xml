@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Карточка с основной информацией -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,7 +20,6 @@
             android:elevation="4dp"
             android:layout_marginBottom="24dp">
 
-            <!-- Название города -->
             <TextView
                 android:id="@+id/tomorrowCityTextView"
                 android:layout_width="wrap_content"
@@ -31,7 +29,6 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
 
-            <!-- Дата -->
             <TextView
                 android:id="@+id/tomorrowDateTextView"
                 android:layout_width="wrap_content"
@@ -40,7 +37,6 @@
                 android:textColor="#757575"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Текущая температура -->
             <TextView
                 android:id="@+id/tomorrowTempTextView"
                 android:layout_width="wrap_content"
@@ -51,14 +47,12 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Разделительная линия -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#E0E0E0"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Температуры по времени суток -->
             <TextView
                 android:id="@+id/tomorrowMorningTemp"
                 android:layout_width="match_parent"
@@ -118,7 +112,6 @@
                 android:paddingVertical="8dp"/>
         </LinearLayout>
 
-        <!-- Кнопка назад -->
         <Button
             android:id="@+id/tomorrowBackButton"
             android:layout_width="match_parent"
