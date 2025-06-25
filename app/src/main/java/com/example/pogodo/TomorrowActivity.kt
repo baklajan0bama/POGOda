@@ -35,16 +35,14 @@ class TomorrowActivity : AppCompatActivity() {
 
         cityTextView.text = city
         
-        // Устанавливаем дату завтра
         val calendar = Calendar.getInstance().apply { add(Calendar.DAY_OF_YEAR, 1) }
         val tomorrowDate = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(calendar.time)
         dateTextView.text = tomorrowDate
 
-        // Загружаем погоду на завтра
         fetchTomorrowWeather(latitude, longitude)
 
         backButton.setOnClickListener {
-            finish() // Закрываем текущую активность и возвращаемся назад
+            finish() 
         }
     }
 
@@ -74,7 +72,6 @@ class TomorrowActivity : AppCompatActivity() {
                     val hourly = jsonObj.getJSONObject("hourly")
                     val temps = hourly.getJSONArray("temperature_2m")
                     
-                    // Рассчитываем температуры для разных периодов дня
                     val morningHours = 6..11
                     val dayHours = 12..17
                     val eveningHours = 18..23
@@ -85,7 +82,6 @@ class TomorrowActivity : AppCompatActivity() {
                     val eveningAvg = calculateAverageTemp(temps, eveningHours)
                     val nightAvg = calculateAverageTemp(temps, nightHours)
                     
-                    // Максимальная температура как основная
                     val maxTemp = listOf(morningAvg, dayAvg, eveningAvg, nightAvg).maxOrNull() ?: 0.0
                     
                     runOnUiThread {
